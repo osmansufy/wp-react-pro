@@ -2,10 +2,11 @@
 
 import { Fill } from "@wordpress/components";
 import { registerPlugin } from "@wordpress/plugins";
+import DokanProComponent from "./components/DokanProFields";
 
 // Fill Component for Pro Features
 const fillNameFromOption = "wp-react-pro";
-const ProFeatureFill = () => (
+const App = () => (
   <>
     <Fill name={fillNameFromOption}>
       <div
@@ -25,10 +26,11 @@ const ProFeatureFill = () => (
         <p>This feature is only available filed two </p>
       </div>
     </Fill>
+    <DokanProComponent />
   </>
 );
 
 // Register the plugin
 registerPlugin("wp-react-pro", {
-  render: ProFeatureFill, // render the fill
+  render: App, // render the fill
 });
